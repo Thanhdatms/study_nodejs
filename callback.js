@@ -1,14 +1,22 @@
 // Function
 // 2 được truyền qua đối số
 
-function myFunction(param){
-    param('Hoc lap trinh')
+
+Array.prototype.forEach2 = function(callback){
+
+    for (var index in this) {
+        if(this.hasOwnProperty(index)){
+           callback(this[index], index);
+        } 
+    }
 }
 
+const course = [
+    'javascript',
+    'php',
+    'Ruby'
+]
 
-function mycallback(value){
-    console.log('value: ', value)
-}
- 
-myFunction(123) // nếu truyền vào 123 sẽ lỗi ngày vì trong param
-
+course.forEach2((course) => {
+    console.log(course);
+});

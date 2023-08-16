@@ -8,6 +8,6 @@ const base = path.basename(filePath)
 
 console.log(base)
 
-const absolute = path.resolve(__dirname, 'content', 'subfoler', 'test.txx')
+const absolute = path.resolve(__dirname, 'content', 'subfoler', 'test.txt')
 
 console.log(absolute)
